@@ -157,7 +157,9 @@ const drawBoxes = () => {
   rlist.innerHTML = openedBoxes.reverse().map(({category, name}) => category === 'Ultra Rare' 
     ? `<li><b>${category} - ${name}</b></li>` 
     : `<li>${category} - ${name}</li>`).join('')
-  urlist.innerHTML = ultraRareBoxes.map(({category, name}) => `<li>${category} - ${name}</li>`).join('')
+  urlist.innerHTML = ultraRareBoxes.length === 0 
+  ? `<li>---</li>`
+  : ultraRareBoxes.map(({category, name}) => `<li>${category} - ${name}</li>`).join('')
 
 }
 
