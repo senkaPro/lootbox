@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./test.js"></script>
+    <title>Document</title>
+</head>
+<body class="flex items-center justify-center">
+    <div class="bg-[#f1f2f3] place-self-center w-[50%] h-full p-20">
+        <h1 class="text-center text-black font-medium text-[36px]">Lootbox Game Engine</h1>
+        <div class="flex flex-1 justify-center items-center my-[10px]">
+            <h4>Balance:</h4><h3 id="balance" class="py-[5px] font-bold text-sm px-[2px]"></h3>
+        </div>
+        <div class="flex flex-1 justify-center items-center">
+            <input name="balance" type="number" placeholder="Balance"/>
+            <button class="btn ring ring-1 rounded-[8px] p-[2px] px-[5px] mx-[15px] font-md" onclick="setBalance()">Add Coins</button>
+        </div>
+        <div class="flex flex-col flex-1 mt-[10px] items-center justify-between">
+            <span id="label" class="min-h-[100px] py-[10px] font-bold text-lg"></span>
+            <span id="lastCategory" class="py-[5px] font-bold text-sm"></span>
+            <div class="flex p-1 gap-5">
+                <button onclick="onOpen()" class="btn ring ring-1 rounded-[8px] p-[15px] px-[45px] font-md">Open</button>
+                <button onclick="onOpenByEleven()" class="btn ring ring-1 rounded-[8px] p-[15px] px-[45px] font-md">Open 11</button>
+            </div>
+            <span class="py-[5px] font-bold text-sm">Ultra Rare</span>
+            <ul id="urlist" class="flex flex-1 flex-col py-[20px]"></ul>
+            <span class="py-[5px] font-bold text-sm">Aquired Items</span>
+            <ul id="rlist" class="flex flex-1 flex-col max-h-[350px] bg-white overflow-y-auto p-10 my-[20px]"></ul>
+        </div>
+    </div>
+</body>
+</html>
